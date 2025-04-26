@@ -1,0 +1,85 @@
+{
+  "name": "chicken-code-optimizer",
+  "displayName": "Chicken Code",
+  "description": "optimize your code",
+  "version": "0.0.5",
+  "engines": {
+    "vscode": "^1.93.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "icon": "assets/images/logo-ntu.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/huynhquocbaoltv/chicken-code"
+  },
+  "license": "MIT",
+  "publisher": "ChickenTeam",
+  "activationEvents": [
+    "onCommand:chickenCodeOptimizationResultsView"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "chicken-code.helloWorld",
+        "title": "Hello World1255"
+      },
+      {
+        "command": "chicken-code.optimizeSelectedCode",
+        "title": "Optimize Selected Code"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "chickenCodeOptimizer",
+          "title": "Chicken Code",
+          "icon": "assets/svg/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "chickenCodeOptimizer": [
+        {
+          "type": "webview",
+          "id": "chickenCodeOptimizationResultsView",
+          "name": "Optimization Results"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "yarn run compile-tests && yarn run compile && yarn run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/lodash.merge": "^4.6.9",
+    "@types/mocha": "^10.0.9",
+    "@types/node": "20.x",
+    "@types/node-fetch": "^2.6.12",
+    "@types/vscode": "^1.93.0",
+    "@typescript-eslint/eslint-plugin": "^8.10.0",
+    "@typescript-eslint/parser": "^8.7.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "clean-webpack-plugin": "^4.0.0",
+    "eslint": "^9.13.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.6.3",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "dependencies": {
+    "chicken-code-optimizer": "file:"
+  }
+}
