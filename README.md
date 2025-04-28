@@ -138,7 +138,7 @@ We welcome contributions from the community! If you find a bug or have a feature
 
 ## 📞 **Support**
 
-If you have any questions, feel free to reach out via email: **esdridzesdridz@gmail.com**.
+If you have any questions, feel free to reach out via email: **esdridz@gmail.com**.
 
 ---
 
