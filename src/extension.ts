@@ -1,12 +1,12 @@
 import * as vscode from "vscode";
 import { OptimizationResultsProvider } from "./optimizationResultsProvider";
-import { OptimizeCodeLensProvider } from "./optimizationResultsProvider";
 import { checkApiKey, clearApiKey } from "./checkApiKey";
 import { ON_SAVE_KEY } from "./constants";
+import { OptimizeCodeLensProvider } from "./codeLensProvider";
 
 export async function activate(context: vscode.ExtensionContext) {
   let debounceTimer: NodeJS.Timeout | undefined;
-  const apiKey = await checkApiKey(context);
+  const apiKey = checkApiKey(context);
   const optimizationProvider = new OptimizationResultsProvider(context, apiKey);
   context.subscriptions.push(
     vscode.window.registerWebviewViewProvider(

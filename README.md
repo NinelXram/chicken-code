@@ -132,13 +132,13 @@ Chicken Code uses the **Google Generative Language API** to create source code o
 
 We welcome contributions from the community! If you find a bug or have a feature suggestion, please open an issue or submit a pull request on GitHub.
 
-- **GitHub Repository**: [Chicken Code on GitHub](https://github.com/khanhhung0810/chicken-code)
+- **GitHub Repository**: [Chicken Code on GitHub](https://github.com/NinelXram/chicken-code)
 
 ---
 
 ## 📞 **Support**
 
-If you have any questions, feel free to reach out via email: **lhkhungg@gmail.com**.
+If you have any questions, feel free to reach out via email: **esdridzesdridz@gmail.com**.
 
 ---
 

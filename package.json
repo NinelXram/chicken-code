@@ -1,31 +1,27 @@
 {
-  "name": "chicken-code-optimizer",
+  "name": "chicken-code",
   "displayName": "Chicken Code",
   "description": "optimize your code",
-  "version": "0.0.5",
+  "version": "1.0.2",
   "engines": {
     "vscode": "^1.93.0"
   },
   "categories": [
     "Other"
   ],
-  "icon": "assets/images/logo-ntu.png",
+  "icon": "assets/images/image.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/huynhquocbaoltv/chicken-code"
+    "url": "https://github.com/NinelXram/chicken-code"
   },
   "license": "MIT",
-  "publisher": "ChickenTeam",
+  "publisher": "Chickencodeoptimizer",
   "activationEvents": [
     "onCommand:chickenCodeOptimizationResultsView"
   ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
-      {
-        "command": "chicken-code.helloWorld",
-        "title": "Hello World1255"
-      },
       {
         "command": "chicken-code.optimizeSelectedCode",
         "title": "Optimize Selected Code"
@@ -36,7 +32,7 @@
         {
           "id": "chickenCodeOptimizer",
           "title": "Chicken Code",
-          "icon": "assets/svg/icon.svg"
+          "icon": "assets/images/logo.png"
         }
       ]
     },

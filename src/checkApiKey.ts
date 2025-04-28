@@ -2,23 +2,23 @@ import * as vscode from "vscode";
 import { testFetchWithApiKey } from "./service";
 import { API_KEY_STORAGE_KEY } from "./constants";
 
-export const checkApiKey = async (
+export const checkApiKey = (
   context: vscode.ExtensionContext
-): Promise<string | undefined> => {
+) => {
   let apiKey = context.globalState.get<string>(API_KEY_STORAGE_KEY);
 
-  if (!apiKey) {
-    const userResponse = await vscode.window.showInformationMessage(
-      "Are you sure you want to delete the API Key?, You can create a new API Key at: https://aistudio.google.com/apikey",
-      "Input API Key",
-      "Cancel"
-    );
+  // if (!apiKey) {
+  //   const userResponse = await vscode.window.showInformationMessage(
+  //     "Are you sure you want to delete the API Key?, You can create a new API Key at: https://aistudio.google.com/apikey",
+  //     "Input API Key",
+  //     "Cancel"
+  //   );
 
-    if (userResponse === "Input API Key") {
-      apiKey = await promptForApiKey(context);
-    }
-  }
-  return apiKey;
+  //   if (userResponse === "Input API Key") {
+  //     apiKey = await promptForApiKey(context);
+  //   }
+  // }
+  return apiKey || ""
 };
 
 const promptForApiKey = async (
